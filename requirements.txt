@@ -2,3 +2,4 @@ requests==2.22.0
 Sphinx==2.4.1
 sphinx-autodoc-typehints==1.10.3
 pylint==2.4.4
+pytz==2019.3

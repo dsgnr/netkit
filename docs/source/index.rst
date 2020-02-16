@@ -8,3 +8,8 @@ Netkit Auth
 =====================
 .. automodule:: netkit.auth
    :members:
+
+Netkit Sites
+=====================
+.. automodule:: netkit.sites
+   :members:

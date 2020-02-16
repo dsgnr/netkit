@@ -1,22 +1,22 @@
 """
 Helper to interact with the NetBox API
 """
+# Third Party
 import requests
 
+# First Party
+from netkit.auth import Auth
 
-def netbox_api(auth, path, payload=None, method="GET"):
+
+def netbox_api(
+    auth: Auth, path: str, payload: dict = None, method: str = "GET"
+) -> requests.Response:
     """
     :param auth: Auth object to use for authentication to the API
-    :type auth: Auth
     :param path: The NetBox API endpoint to use
-    :type path: str
     :param payload: The data sent to the API
-    :type payload: dict
     :param method: The request type
-    :type method: str
     :returns: The NetBox API response object
-    :rtype: dict
-
     :raises Exception: Catches all exceptions
     """
     headers = {

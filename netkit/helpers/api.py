@@ -4,19 +4,15 @@ Helper to interact with the NetBox API
 # Third Party
 import requests
 
-# First Party
-from netkit.auth import Auth
-
 
 def netbox_api(
-    auth: Auth, path: str, payload: dict = None, method: str = "GET"
+    auth: 'Auth', path: str, payload: dict = None, method: str = "GET"
 ) -> requests.Response:
     """
     :param auth: Auth object to use for authentication to the API
     :param path: The NetBox API endpoint to use
     :param payload: The data sent to the API
     :param method: The request type
-    :returns: The NetBox API response object
     :raises Exception: Catches all exceptions
     """
     headers = {
@@ -31,5 +27,5 @@ def netbox_api(
         response = requests.request(method, url, json=payload, headers=headers)
         response.raise_for_status()
         return response
-    except Exception as ex:
-        raise Exception(f"Invalid response received from NetBox API when retrieving data: {ex}")
+    except Exception as error:
+        raise Exception(f"Invalid response received from NetBox API when retrieving data: {error}")

@@ -1,0 +1,50 @@
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "name": "Netkit Lab",
+            "slug": "netkit-lab",
+            "status": {
+                "value": 1,
+                "label": "Active"
+            },
+            "region": {
+                "id": 1,
+                "url": "http://netkit.example.com/api/dcim/regions/1/",
+                "name": "Region One",
+                "slug": "region-one"
+            },
+            "tenant": {
+                "id": 1,
+                "url": "http://netkit.example.com/api/tenancy/tenants/1/",
+                "name": "Tenant One",
+                "slug": "tenant-one"
+            },
+            "facility": "Homelab",
+            "asn": 12200,
+            "time_zone": "Europe/London",
+            "description": "",
+            "physical_address": "Address line 1",
+            "shipping_address": "Address line 2",
+            "latitude": null,
+            "longitude": null,
+            "contact_name": "dsgnr",
+            "contact_phone": "01234 56789",
+            "contact_email": "email@example.com",
+            "comments": "",
+            "tags": [],
+            "custom_fields": {},
+            "created": "2019-09-26",
+            "last_updated": "2020-02-16T17:18:50.643571Z",
+            "circuit_count": null,
+            "device_count": 6,
+            "prefix_count": 1,
+            "rack_count": 1,
+            "virtualmachine_count": 18,
+            "vlan_count": null
+        }
+    ]
+}

@@ -11,5 +11,10 @@ Netkit Auth
 
 Netkit Sites
 =====================
-.. automodule:: netkit.sites
+.. automodule:: netkit.organization.sites
+   :members:
+
+Netkit Regions
+=====================
+.. automodule:: netkit.organization.regions
    :members:

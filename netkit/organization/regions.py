@@ -10,6 +10,7 @@ import requests
 # First Party
 from netkit.auth import Auth
 from netkit.helpers.api import netbox_api
+from netkit.helpers.exceptions import NetkitError
 
 
 class Regions:
@@ -51,6 +52,17 @@ class Regions:
             return [RegionInfo(region) for region in self._get_regions()]
         except TypeError:
             return []
+
+    def create_region(self, **kwargs) -> 'RegionInfo':
+        """
+        Creates a new region with supplied arguments.
+        Please see https://netbox.readthedocs.io/en/stable/api/examples/ for an exmaple payload
+        """
+        try:
+            result = netbox_api(self._auth, "/api/dcim/regions/", payload=kwargs, method="POST")
+            return RegionInfo(result.json())
+        except Exception as error:
+            raise NetkitError(message=error)
 
 
 class RegionInfo:

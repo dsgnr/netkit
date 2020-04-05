@@ -31,7 +31,7 @@ class Regions:
     @property
     def auth(self) -> Auth:
         """
-        The [Auth] object used to authenticate to the instance
+        The :class:`netkit.auth.Auth` object used to authenticate to the instance
         """
         return self._auth
 
@@ -45,7 +45,7 @@ class Regions:
     @property
     def list_regions(self) -> List['RegionInfo']:
         """
-        A list of [RegionInfo] objects representing regions
+        A list of :class:`netkit.organization.regions.RegionInfo` objects representing regions
         """
         try:
             return [RegionInfo(region) for region in self._get_regions()]

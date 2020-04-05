@@ -34,7 +34,7 @@ class Sites:
     @property
     def auth(self) -> Auth:
         """
-        The [Auth] object used to authenticate to the instance
+        The :class:`netkit.auth.Auth` object used to authenticate to the instance
         """
         return self._auth
 
@@ -48,7 +48,7 @@ class Sites:
     @property
     def list_sites(self) -> List['SiteInfo']:
         """
-        A list of [SiteInfo] objects representing sites
+        A list of :class:`netkit.organization.sites.SiteInfo` objects representing sites
         """
         return [SiteInfo(site) for site in self._get_sites()]
 

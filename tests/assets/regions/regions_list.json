@@ -1,0 +1,14 @@
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "name": "United Kingdom",
+            "slug": "united-kingdom",
+            "parent": null,
+            "site_count": 1
+        }
+    ]
+}

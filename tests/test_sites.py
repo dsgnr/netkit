@@ -11,7 +11,7 @@ import requests_mock
 
 # First Party
 from netkit.auth import Auth
-from netkit.sites import Sites
+from netkit.organization.sites import Sites
 
 
 def fake_api(*args, **kwargs):

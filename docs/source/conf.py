@@ -31,7 +31,9 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx_rtd_theme', 'sphinx.ext.intersphinx',
-              'sphinx.ext.autodoc', 'sphinx_autodoc_typehints']
+              'sphinx.ext.autodoc',
+              'sphinx.ext.autodoc.typehints']
+autodoc_typehints = 'description'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -58,3 +60,4 @@ html_static_path = ['_static']
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3', None),
 }
+always_document_param_types = True

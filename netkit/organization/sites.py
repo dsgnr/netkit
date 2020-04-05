@@ -12,6 +12,7 @@ from pytz import timezone
 # First Party
 from netkit.auth import Auth
 from netkit.helpers.api import netbox_api
+from netkit.helpers.exceptions import NetkitError
 
 
 class Sites:
@@ -50,6 +51,17 @@ class Sites:
         A list of [SiteInfo] objects representing sites
         """
         return [SiteInfo(site) for site in self._get_sites()]
+
+    def create_site(self, **kwargs) -> 'SiteInfo':
+        """
+        Creates a new site with supplied arguments.
+        Please see https://netbox.readthedocs.io/en/stable/api/examples/ for an exmaple payload
+        """
+        try:
+            result = netbox_api(self._auth, "/api/dcim/sites/", payload=kwargs, method="POST")
+            return SiteInfo(result.json())
+        except Exception as error:
+            raise NetkitError(message=error)
 
 
 class SiteInfo:
